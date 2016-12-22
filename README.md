@@ -1,5 +1,5 @@
 # dotfile
-curl, git and zsh must be installed firstly!
+zsh, vim, git, curl and python3.5 must be installed firstly!
 
 # Usage
 sudo apt install zsh vim git curl python3.5
