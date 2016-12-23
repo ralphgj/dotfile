@@ -4,7 +4,7 @@ zsh, vim, git, curl and python3.5 must be installed firstly!
 # Usage
 
 ```bash
-sudo apt install zsh vim git curl python3.5
+sudo apt install zsh vim git curl python3.5 build-essential python-dev
 
 ./install.sh
 
