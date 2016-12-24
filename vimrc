@@ -116,7 +116,8 @@ set cursorcolumn
 set list
 " But only interesting whitespace
 if &listchars ==# 'eol:$'
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+"   set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
+    set listchars=tab:··,trail:·,extends:>,precedes:<,nbsp:+
 endif
 
 " 高亮显示搜索结果
@@ -494,10 +495,11 @@ autocmd VimEnter * if !argc() | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " 让Tree把自己给装饰得多姿多彩漂亮点
-let NERDChristmasTree=1
+let NERDChristmasTree=0
 " 改变tree目录的同时改变工程的目录 
-" let NERDTreeChDirMode=2
-let NERDTreeChDirMode=1
+let NERDTreeChDirMode=2
+let g:NERDTreeDirArrows=0
+" let NERDTreeChDirMode=1
 " 是否默认显示书签列表
 let NERDTreeShowBookmarks=1
 " 设置 NERDTree 子窗口宽度
@@ -532,6 +534,23 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" <<
+
+" >>
+" nerdtree-git-plugin
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 " <<
 

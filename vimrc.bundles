@@ -28,7 +28,10 @@ Plugin 'vim-scripts/vimprj'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-scripts/DrawIt'
+" ultisnips and snipmate are tools of snippets
 Plugin 'SirVer/ultisnips'
+" Plugin 'msanders/snipmate.vim'
+" YouCompleteMe support C#, GO, TypeScript, JavaScript, Rust
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'fholgado/minibufexpl.vim'
@@ -39,8 +42,36 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'othree/html5.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'posva/vim-vue'
+Plugin 'mxw/vim-jsx'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'gko/vim-coloresque'
 Plugin 'vim-scripts/ctags.vim'
+" delimitMate provides insert mode auto-completion for quotes, parens, brackets, etc.
+Plugin 'Raimondi/delimitMate'
+" run shell command in vim
+Plugin 'christoomey/vim-run-interactive'
+
+
+" >>
+" record
+
+" Plugin 'fatih/vim-go'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'evanmiller/nginx-vim-syntax'
+" Plugin 'tpope/vim-pathogen'
+" Plugin 'klen/python-mode'
+
+" <<
+
+" Plugin 'godlygeek/tabular'
+
 
 " 插件列表结束
 call vundle#end()
