@@ -163,8 +163,9 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
-" 自动缩进
+" 自动调整缩进宽度
 set shiftround
+
 
 " 缩进可视化插件 Indent Guides
 " 随 vim 自启动
@@ -290,10 +291,10 @@ let g:SignatureMap = {
 " 标签列表
 
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
-let tagbar_left=1
+let tagbar_left=0
 " 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
-" nnoremap <Leader>ilt :TagbarToggle<CR>
-nmap <F6> :TagbarToggle<CR>
+nnoremap <Leader>ilt :TagbarToggle<CR>
+" nmap <F6> :TagbarToggle<CR>
 " 设置标签子窗口的宽度
 let tagbar_width=32
 " tagbar 子窗口中不显示冗余帮助信息
@@ -498,8 +499,8 @@ nmap <Leader>man :Man 3 <cword><CR>
 " 工程文件浏览
 
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
-" nmap <Leader>fl :NERDTreeToggle<CR>
-nmap <F5> :NERDTreeToggle<cr>
+nmap <Leader>fl :NERDTreeToggle<CR>
+" nmap <F5> :NERDTreeToggle<cr>
 " Automatically open a NERDTree if no files where specified
 autocmd VimEnter * if !argc() | NERDTree | endif
 " Close vim if the only window left open is a NERDTree
