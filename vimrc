@@ -158,13 +158,12 @@ filetype indent on
 " 将制表符扩展为空格
 set expandtab
 " 设置编辑时制表符占用空格数
-set tabstop=2
+set tabstop=4
 " 设置格式化时制表符占用空格数
-set shiftwidth=2
+set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=2
+set softtabstop=4
 " 自动缩进
-" TODO
 set shiftround
 
 " 缩进可视化插件 Indent Guides
@@ -175,7 +174,17 @@ let g:indent_guides_start_level=2
 " 色块宽度
 let g:indent_guides_guide_size=1
 " 快捷键 i 开/关缩进可视化
-nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+" nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+" 设置缩进显示颜色
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+" When set background=dark
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+" When set background=light
+" hi IndentGuidesOdd  ctermbg=white
+" hi IndentGuidesEven ctermbg=lightgrey
 
 " <<
 
@@ -202,10 +211,11 @@ endif
 set background=dark
 " set background=light
 colorscheme solarized
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
 " colorscheme molokai
 " colorscheme phd
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
 
 " Make it obvious where 80 characters is
 set textwidth=80

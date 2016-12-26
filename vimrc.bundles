@@ -28,9 +28,10 @@ Plugin 'vim-scripts/vimprj'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-scripts/DrawIt'
-" ultisnips and snipmate are tools of snippets
+" ultisnips and snipmate are tools of snippets, ultisnips is recommended
 Plugin 'SirVer/ultisnips'
 " Plugin 'msanders/snipmate.vim'
+Plugin 'honza/vim-snippets'
 " YouCompleteMe support C#, GO, TypeScript, JavaScript, Rust
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-protodef'
@@ -70,7 +71,6 @@ Plugin 'christoomey/vim-run-interactive'
 
 " <<
 
-" Plugin 'godlygeek/tabular'
 
 
 " 插件列表结束
