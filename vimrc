@@ -208,7 +208,7 @@ endif
 
 " <<
 
-" 配色方案
+" 配色方案   
 set background=dark
 " set background=light
 colorscheme solarized
@@ -216,6 +216,11 @@ colorscheme solarized
 " colorscheme phd
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
+set t_Co=256
+let g:solarized_termcolors=256
+" set t_Co=16
+" let g:solarized_termcolors=16
+" let g:solarized_termtrans=1
 
 
 " Make it obvious where 80 characters is
