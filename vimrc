@@ -177,9 +177,9 @@ let g:indent_guides_guide_size=1
 " 快捷键 i 开/关缩进可视化
 " nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 " 设置缩进显示颜色
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 " When set background=dark
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
@@ -209,11 +209,13 @@ endif
 " <<
 
 " 配色方案
-" let g:solarized_termtrans=1
+let g:solarized_termtrans=1
 if has('gui_running')
     set background=light
+    " set background=dark
 else
     set background=dark
+    " set background=light
 endif
 set t_Co=256
 let g:solarized_termcolors=256
