@@ -52,7 +52,10 @@ Plugin 'groenewege/vim-less'
 Plugin 'gko/vim-coloresque'
 Plugin 'vim-scripts/ctags.vim'
 " delimitMate provides insert mode auto-completion for quotes, parens, brackets, etc.
-Plugin 'Raimondi/delimitMate'
+"Plugin 'Raimondi/delimitMate'
+"Plugin 'underlog/ClosePairs'
+Plugin 'jiangmiao/auto-pairs'
+" Plugin 'vim-utils/vim-alt-mappings'
 " run shell command in vim
 Plugin 'christoomey/vim-run-interactive'
 
@@ -60,7 +63,8 @@ Plugin 'christoomey/vim-run-interactive'
 " >>
 " record
 
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
+Plugin 'vim-scripts/Conque-GDB'
 " Plugin 'jelera/vim-javascript-syntax'
 " Plugin 'pangloss/vim-javascript'
 " Plugin 'kchmck/vim-coffee-script'

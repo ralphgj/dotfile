@@ -116,7 +116,7 @@ set cursorcolumn
 set list
 " But only interesting whitespace
 if &listchars ==# 'eol:$'
-"   set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
+    "set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
     set listchars=tab:··,trail:·,extends:>,precedes:<,nbsp:+
 endif
 
@@ -212,9 +212,17 @@ endif
 let g:solarized_termtrans=1
 if has('gui_running')
     set background=light
+    " fix Meta key map
+    if has('mac')
+        set macmeta
+    endif
     " set background=dark
 else
     set background=dark
+    " fix Meta key map
+    if has('mac')
+        Plugin 'vim-utils/vim-alt-mappings'
+    endif
     " set background=light
 endif
 set t_Co=256
@@ -664,3 +672,26 @@ let g:user_emmet_mode='i' " enable for insert mode
 let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_javascript_checkers = ['jsxhint']
 " let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+ 
+
+" go debug setting
+let g:ConqueTerm_Color = 2
+let g:ConqueTerm_CloseOnEnd = 1
+let g:ConqueTerm_StartMessages = 0
+
+function! DebugSession()
+    silent make -o vimgdb -gcflags "-N -l"
+    redraw!
+    if (filereadable("vimgdb"))
+        ConqueGdb vimgdb
+    else
+        echom "Couldn't find debug file"
+    endif
+endfunction
+function! DebugSessionCleanup(term)
+    if (filereadable("vimgdb"))
+        let ds=delete("vimgdb")
+    endif
+endfunction
+call conque_term#register_function("after_close", "DebugSessionCleanup")
+nmap <leader>dg :call DebugSession()<CR>
